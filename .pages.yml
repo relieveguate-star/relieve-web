@@ -1,0 +1,3250 @@
+{
+  "media": {
+    "input": "public/assets",
+    "output": "/assets",
+    "rename": "safe"
+  },
+  "content": [
+    {
+      "name": "media",
+      "label": "01 · Fotos, logo y video",
+      "type": "file",
+      "path": "content/media.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "logo_relieve",
+          "label": "Logo (se muestra en blanco; usa PNG transparente)",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "geotecnia",
+          "label": "Servicio — Geotecnia",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "geofisica",
+          "label": "Servicio — Geofísica",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "topografia",
+          "label": "Servicio — Topografía",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "geologia",
+          "label": "Servicio — Geología",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "mineria",
+          "label": "Servicio — Minería",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "ingenieria",
+          "label": "Servicio — Ingeniería",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "hidrogeologia",
+          "label": "Servicio — Hidrogeología",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "perforacion",
+          "label": "Servicio — Perforación",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "equipo",
+          "label": "Nuestra experiencia — fotografía principal",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "video_poster",
+          "label": "Portada del video",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "relieve_original",
+          "label": "Video de RELIEVE (MP4)",
+          "type": "file",
+          "required": true
+        },
+        {
+          "name": "volcanes",
+          "label": "Portada — volcanes",
+          "type": "image",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "contacto",
+      "label": "02 · Contacto y cotizaciones",
+      "type": "file",
+      "path": "content/contacto.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "email",
+          "label": "Correo de contacto",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "telefono_visible",
+          "label": "Teléfono tal como se muestra",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "telefono",
+          "label": "WhatsApp y llamadas: código de país y número, solo dígitos",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "comun",
+      "label": "03 · Menú y pie de página",
+      "type": "file",
+      "path": "content/comun.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "texto_001",
+          "label": "Inicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_002",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_003",
+          "label": "Nuestra experiencia",
+          "type": "string"
+        },
+        {
+          "name": "texto_004",
+          "label": "Nosotros",
+          "type": "string"
+        },
+        {
+          "name": "texto_005",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        },
+        {
+          "name": "texto_006",
+          "label": "Geología, geofísica e ingeniería",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "aplicadas a tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Explora",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Nuestros servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Nuestra experiencia",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Conversemos",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Guatemala",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "Hacemos que los proyectos inicien con el pie derecho.",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "index",
+      "label": "Inicio",
+      "type": "file",
+      "path": "content/index.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Paisaje de volcanes de Guatemala",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_006",
+          "label": "Imagen — descripción accesible · Minería y canteras — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_007",
+          "label": "Imagen — descripción accesible · Hidrogeología e hidrología — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_008",
+          "label": "Imagen — descripción accesible · Perforación y exploración — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_009",
+          "label": "Imagen — descripción accesible · Ingeniería y estabilización — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_010",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_011",
+          "label": "Geología e ingeniería | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "GEOLOGÍA · GEOFÍSICA · INGENIERÍA",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "Hacemos que los",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "proyectos inicien",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "con el pie derecho.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Conoce el terreno. Comprende el subsuelo. Avanza con criterio técnico. Integramos geolo…",
+          "type": "text"
+        },
+        {
+          "name": "texto_018",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Explora nuestros servicios →",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Descubre RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Investigación",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "Recomendaciones",
+          "type": "string"
+        },
+        {
+          "name": "texto_025",
+          "label": "SOMOS RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Conocer el terreno",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "cambia las decisiones.",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Somos una empresa guatemalteca de consultoría en geología aplicada, geofísica e ingenie…",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Cada proyecto empieza con preguntas sobre el terreno. En RELIEVE las abordamos con expl…",
+          "type": "text"
+        },
+        {
+          "name": "texto_030",
+          "label": "Conoce nuestra experiencia ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "NUESTROS SERVICIOS",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "La investigación adecuada",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "para cada proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Explora nuestras especialidades y conoce el alcance de cada una.",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_047",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_048",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_049",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_050",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_051",
+          "label": "Recursos · Reservas · Planes de trabajo",
+          "type": "string"
+        },
+        {
+          "name": "texto_052",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_053",
+          "label": "Evaluación técnica desde la exploración hasta la planificación.",
+          "type": "string"
+        },
+        {
+          "name": "texto_054",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_055",
+          "label": "Agua subterránea · Cuencas · Balance hídrico",
+          "type": "string"
+        },
+        {
+          "name": "texto_056",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_057",
+          "label": "Investigación del agua para orientar su aprovechamiento.",
+          "type": "string"
+        },
+        {
+          "name": "texto_058",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_059",
+          "label": "Diamantina · Núcleos · Muestreo",
+          "type": "string"
+        },
+        {
+          "name": "texto_060",
+          "label": "Perforación y exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_061",
+          "label": "Verificación directa de las condiciones del subsuelo.",
+          "type": "string"
+        },
+        {
+          "name": "texto_062",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_063",
+          "label": "Taludes · Presas · Obras civiles",
+          "type": "string"
+        },
+        {
+          "name": "texto_064",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_065",
+          "label": "Acompañamiento técnico para obras y estabilidad.",
+          "type": "string"
+        },
+        {
+          "name": "texto_066",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_067",
+          "label": "EXPLORACIÓN EN CAMPO",
+          "type": "string"
+        },
+        {
+          "name": "texto_068",
+          "label": "Hacemos visible",
+          "type": "string"
+        },
+        {
+          "name": "texto_069",
+          "label": "lo que no se ve.",
+          "type": "string"
+        },
+        {
+          "name": "texto_070",
+          "label": "La exploración geofísica permite investigar el subsuelo a partir de sus propiedades fís…",
+          "type": "text"
+        },
+        {
+          "name": "texto_071",
+          "label": "Explora nuestras áreas de experiencia ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_072",
+          "label": "Tu navegador no puede reproducir este video.",
+          "type": "string"
+        },
+        {
+          "name": "texto_073",
+          "label": "CÓMO TRABAJAMOS",
+          "type": "string"
+        },
+        {
+          "name": "texto_074",
+          "label": "Del reconocimiento inicial",
+          "type": "string"
+        },
+        {
+          "name": "texto_075",
+          "label": "a la recomendación técnica.",
+          "type": "string"
+        },
+        {
+          "name": "texto_076",
+          "label": "Escuchamos",
+          "type": "string"
+        },
+        {
+          "name": "texto_077",
+          "label": "Revisamos los antecedentes, objetivos y condiciones del proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_078",
+          "label": "Investigamos",
+          "type": "string"
+        },
+        {
+          "name": "texto_079",
+          "label": "Definimos y ejecutamos la exploración y los ensayos necesarios.",
+          "type": "string"
+        },
+        {
+          "name": "texto_080",
+          "label": "Interpretamos",
+          "type": "string"
+        },
+        {
+          "name": "texto_081",
+          "label": "Relacionamos los datos de campo con el contexto del terreno.",
+          "type": "string"
+        },
+        {
+          "name": "texto_082",
+          "label": "Recomendamos",
+          "type": "string"
+        },
+        {
+          "name": "texto_083",
+          "label": "Entregamos conclusiones y criterios para el siguiente paso.",
+          "type": "string"
+        },
+        {
+          "name": "texto_084",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_085",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_086",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_087",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "servicios",
+      "label": "Servicios — listado",
+      "type": "file",
+      "path": "content/servicios.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Imagen — descripción accesible · Minería y canteras — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_006",
+          "label": "Imagen — descripción accesible · Hidrogeología e hidrología — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_007",
+          "label": "Imagen — descripción accesible · Perforación y exploración — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_008",
+          "label": "Imagen — descripción accesible · Ingeniería y estabilización — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_009",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_010",
+          "label": "Servicios | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "NUESTROS SERVICIOS",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Especialistas en el terreno",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "y el subsuelo.",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "Conoce el alcance, las aplicaciones y los entregables de cada especialidad.",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_025",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Recursos · Reservas · Planes de trabajo",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Evaluación técnica desde la exploración hasta la planificación.",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Agua subterránea · Cuencas · Balance hídrico",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Investigación del agua para orientar su aprovechamiento.",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Diamantina · Núcleos · Muestreo",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Perforación y exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Verificación directa de las condiciones del subsuelo.",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Taludes · Presas · Obras civiles",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Acompañamiento técnico para obras y estabilidad.",
+          "type": "string"
+        },
+        {
+          "name": "texto_047",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_048",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_049",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_050",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_051",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "experiencia",
+      "label": "Nuestra experiencia",
+      "type": "file",
+      "path": "content/experiencia.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Profesionales en una visita de campo de RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Minería y canteras — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Hidrogeología e hidrología — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Imagen — descripción accesible · Ingeniería y estabilización — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_006",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_007",
+          "label": "Nuestra experiencia | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "NUESTRA EXPERIENCIA",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Conocimiento técnico.",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Experiencia en campo.",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Un equipo multidisciplinario para proyectos de construcción, infraestructura, minería y…",
+          "type": "text"
+        },
+        {
+          "name": "texto_013",
+          "label": "CAPACIDADES APLICADAS",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "Entendemos las condiciones.",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "Orientamos las decisiones.",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Nuestro equipo reúne más de diez años de experiencia en proyectos de construcción, hidr…",
+          "type": "text"
+        },
+        {
+          "name": "texto_017",
+          "label": "Combinamos geología, geofísica e ingeniería para adaptar la investigación a las necesid…",
+          "type": "text"
+        },
+        {
+          "name": "texto_018",
+          "label": "Áreas de experiencia",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Recursos · Reservas · Planes de trabajo",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Evaluación técnica desde la exploración hasta la planificación.",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_025",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Agua subterránea · Cuencas · Balance hídrico",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Investigación del agua para orientar su aprovechamiento.",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "Taludes · Presas · Obras civiles",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Acompañamiento técnico para obras y estabilidad.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "MÉTODOS Y HERRAMIENTAS",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Trabajo integrado,",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "desde campo hasta gabinete.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Investigación geoeléctrica con sistemas ABEM.",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Levantamientos con dron y fotogrametría.",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Perforación diamantina y logueo de núcleos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Modelación geológica 3D e interpretación técnica.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "cotizacion",
+      "label": "Solicita tu cotización",
+      "type": "file",
+      "path": "content/cotizacion.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_002",
+          "label": "Solicita tu cotización | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_003",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_004",
+          "label": "CONTACTO",
+          "type": "string"
+        },
+        {
+          "name": "texto_005",
+          "label": "Solicita tu cotización.",
+          "type": "string"
+        },
+        {
+          "name": "texto_006",
+          "label": "Cuéntanos qué necesitas y dónde se ubica tu proyecto. Con esa información podremos orie…",
+          "type": "text"
+        },
+        {
+          "name": "texto_007",
+          "label": "Información de tu proyecto",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Nombre completo *",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Empresa",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Correo electrónico *",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Teléfono *",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Servicio de interés *",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Selecciona un servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Perforación y exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Necesito orientación",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Ubicación del proyecto *",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "Describe tu proyecto *",
+          "type": "string"
+        },
+        {
+          "name": "texto_025",
+          "label": "Al continuar se abrirá WhatsApp con tu solicitud preparada. Revísala y presiona Enviar …",
+          "type": "text"
+        },
+        {
+          "name": "texto_026",
+          "label": "Continuar en WhatsApp ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Preparar correo",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "CONTACTO DIRECTO",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Conversemos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Atendemos consultas sobre investigación del terreno, agua, minería e ingeniería.",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "Para orientar tu cotización",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Ubicación del proyecto",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Objetivo del estudio",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Planos o antecedentes disponibles",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Plazo de ejecución esperado",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Los planos y archivos pueden compartirse al continuar la conversación por WhatsApp o co…",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "geofisica",
+      "label": "Geofísica",
+      "type": "file",
+      "path": "content/geofisica.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Geofísica | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Tomografías de resistividad eléctrica (TRE).",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Sondeos eléctricos verticales (SEV).",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Identificación de contactos, espesores, fracturas y zonas de alteración.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Investigación de condiciones asociadas a agua subterránea y terrenos kársticos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Perfiles e interpretación geoeléctrica",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Correlación con el contexto geológico",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Conclusiones y recomendaciones de investigación",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Exploración de agua",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Caracterización del subsuelo",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Apoyo a estudios geotécnicos",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "topografia",
+      "label": "Topografía y cartografía",
+      "type": "file",
+      "path": "content/topografia.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Topografía y cartografía | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Levantamientos topográficos y delimitación de terrenos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Vuelos con dron y fotogrametría.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Modelos digitales de elevación y curvas de nivel.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Perfiles y polígonos de infraestructura.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Planos y curvas de nivel",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Modelos del terreno",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Información espacial según alcance acordado",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Diseño de obras",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Medición de terrenos",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Cartografía de proyectos",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "geotecnia",
+      "label": "Geotecnia",
+      "type": "file",
+      "path": "content/geotecnia.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Geotecnia | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Estudios de suelos e investigación geotécnica.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Ensayos SPT y caracterización de materiales.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Ensayos de laboratorio: granulometría, límites de consistencia, corte directo y otros s…",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Estabilidad de taludes, mapeo de macizos rocosos y control geotécnico en obra.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Modelo geotécnico del terreno",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Resultados de ensayos y parámetros interpretados",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Criterios y recomendaciones para el proyecto",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Edificaciones",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Cimentaciones",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Taludes y excavaciones",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "geologia",
+      "label": "Geología y modelación",
+      "type": "file",
+      "path": "content/geologia.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Geología y modelación — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Geología y modelación | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Cartografía · Modelos 3D · Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Geología y modelación",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Una interpretación integral de las condiciones geológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Estudios y cartografía geológica.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Modelación geológica tridimensional.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Planificación y supervisión de campañas de exploración.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Logueo de núcleos, geomorfología, estratigrafía, petrografía y mineralogía.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Mapas y secciones geológicas",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Modelo geológico según disponibilidad de datos",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Interpretación y recomendaciones técnicas",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Infraestructura",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Evaluación de materiales",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "mineria",
+      "label": "Minería y canteras",
+      "type": "file",
+      "path": "content/mineria.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Minería y canteras — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Minería y canteras | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Recursos · Reservas · Planes de trabajo",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Minería y canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Evaluación técnica desde la exploración hasta la planificación.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Evaluación de oportunidades de exploración minera.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Estimación y cuantificación de recursos y reservas según alcance y calidad de la inform…",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Modelos geológicos y planificación minera.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Planes de trabajo y acompañamiento técnico para solicitudes de licencias.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Evaluación geológica del yacimiento",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Modelos y estimaciones acordadas",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Documentación técnica y planes de trabajo",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Bancos de materiales",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Canteras",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Proyectos de exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "hidrogeologia",
+      "label": "Hidrogeología e hidrología",
+      "type": "file",
+      "path": "content/hidrogeologia.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Hidrogeología e hidrología — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Hidrogeología e hidrología | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Agua subterránea · Cuencas · Balance hídrico",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Hidrogeología e hidrología",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Investigación del agua para orientar su aprovechamiento.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Estudios hidrogeológicos e investigación indirecta de agua subterránea.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Inventario y caracterización de unidades hidrogeológicas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Balance hídrico, aforos y pruebas de infiltración.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Estudios hidrológicos, cartografía de cuencas y zonas inundables.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Caracterización hidrogeológica",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Resultados de medición y análisis",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Recomendaciones para investigación y gestión del agua",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Localización de pozos",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Gestión hídrica",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Proyectos de infraestructura",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "perforacion",
+      "label": "Perforación y exploración",
+      "type": "file",
+      "path": "content/perforacion.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Perforación y exploración — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Perforación y exploración | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Perforación y exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Diamantina · Núcleos · Muestreo",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Perforación y exploración",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Verificación directa de las condiciones del subsuelo.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Perforación diamantina con recuperación de núcleos en diámetros HQ y NQ.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Exploración geotécnica de bancos de materiales.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Supervisión, logueo y muestreo geológico y geotécnico.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Perforación de pozos mecánicos de abastecimiento según condiciones del proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Registros de perforación",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Muestras y cajas de testigo según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Caracterización y documentación de resultados",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Investigación geotécnica",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Exploración de materiales",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Abastecimiento de agua",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "ingenieria",
+      "label": "Ingeniería y estabilización",
+      "type": "file",
+      "path": "content/ingenieria.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "atributo_001",
+          "label": "Imagen — descripción accesible · Ingeniería y estabilización — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_002",
+          "label": "Imagen — descripción accesible · Geofísica — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_003",
+          "label": "Imagen — descripción accesible · Topografía y cartografía — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_004",
+          "label": "Imagen — descripción accesible · Geotecnia — RELIEVE",
+          "type": "text"
+        },
+        {
+          "name": "atributo_005",
+          "label": "Descripción para buscadores · RELIEVE. Servicios de geología, geofísica, geotecnia, topografía,",
+          "type": "text"
+        },
+        {
+          "name": "texto_006",
+          "label": "Ingeniería y estabilización | RELIEVE",
+          "type": "string"
+        },
+        {
+          "name": "texto_007",
+          "label": "Ir al contenido",
+          "type": "string"
+        },
+        {
+          "name": "texto_008",
+          "label": "Servicios",
+          "type": "string"
+        },
+        {
+          "name": "texto_009",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_010",
+          "label": "Taludes · Presas · Obras civiles",
+          "type": "string"
+        },
+        {
+          "name": "texto_011",
+          "label": "Ingeniería y estabilización",
+          "type": "string"
+        },
+        {
+          "name": "texto_012",
+          "label": "Acompañamiento técnico para obras y estabilidad.",
+          "type": "string"
+        },
+        {
+          "name": "texto_013",
+          "label": "Cotiza este servicio ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_014",
+          "label": "ALCANCE TÉCNICO",
+          "type": "string"
+        },
+        {
+          "name": "texto_015",
+          "label": "¿Cómo podemos ayudarte?",
+          "type": "string"
+        },
+        {
+          "name": "texto_016",
+          "label": "Asesoría y soluciones para estabilidad de taludes y control de erosión.",
+          "type": "string"
+        },
+        {
+          "name": "texto_017",
+          "label": "Soil nailing, concreto lanzado, muros y anclajes según diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_018",
+          "label": "Consultoría en seguridad de presas.",
+          "type": "string"
+        },
+        {
+          "name": "texto_019",
+          "label": "Instrumentación y acompañamiento técnico durante la ejecución.",
+          "type": "string"
+        },
+        {
+          "name": "texto_020",
+          "label": "Entregables según alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_021",
+          "label": "Diagnóstico y criterios técnicos",
+          "type": "string"
+        },
+        {
+          "name": "texto_022",
+          "label": "Recomendaciones o diseño según contratación",
+          "type": "string"
+        },
+        {
+          "name": "texto_023",
+          "label": "Seguimiento técnico conforme al alcance",
+          "type": "string"
+        },
+        {
+          "name": "texto_024",
+          "label": "El programa de trabajo y los entregables se definen de acuerdo con las condiciones y ob…",
+          "type": "text"
+        },
+        {
+          "name": "texto_025",
+          "label": "APLICACIONES",
+          "type": "string"
+        },
+        {
+          "name": "texto_026",
+          "label": "Estabilización de laderas",
+          "type": "string"
+        },
+        {
+          "name": "texto_027",
+          "label": "Obras civiles",
+          "type": "string"
+        },
+        {
+          "name": "texto_028",
+          "label": "Presas e infraestructura",
+          "type": "string"
+        },
+        {
+          "name": "texto_029",
+          "label": "Servicios complementarios",
+          "type": "string"
+        },
+        {
+          "name": "texto_030",
+          "label": "Ver todos ↗",
+          "type": "string"
+        },
+        {
+          "name": "texto_031",
+          "label": "TRE · SEV · Interpretación",
+          "type": "string"
+        },
+        {
+          "name": "texto_032",
+          "label": "Geofísica",
+          "type": "string"
+        },
+        {
+          "name": "texto_033",
+          "label": "Investigación del subsuelo con métodos eléctricos.",
+          "type": "string"
+        },
+        {
+          "name": "texto_034",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_035",
+          "label": "Dron RTK · Fotogrametría · Planos",
+          "type": "string"
+        },
+        {
+          "name": "texto_036",
+          "label": "Topografía y cartografía",
+          "type": "string"
+        },
+        {
+          "name": "texto_037",
+          "label": "La geometría del terreno como base de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_038",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_039",
+          "label": "Suelos · Cimentaciones · Taludes",
+          "type": "string"
+        },
+        {
+          "name": "texto_040",
+          "label": "Geotecnia",
+          "type": "string"
+        },
+        {
+          "name": "texto_041",
+          "label": "Conocer suelos y roca para fundamentar el diseño.",
+          "type": "string"
+        },
+        {
+          "name": "texto_042",
+          "label": "Conoce el servicio",
+          "type": "string"
+        },
+        {
+          "name": "texto_043",
+          "label": "EL SIGUIENTE PASO",
+          "type": "string"
+        },
+        {
+          "name": "texto_044",
+          "label": "Hablemos de tu proyecto.",
+          "type": "string"
+        },
+        {
+          "name": "texto_045",
+          "label": "Definamos qué necesitas investigar y cómo podemos ayudarte.",
+          "type": "string"
+        },
+        {
+          "name": "texto_046",
+          "label": "Solicita tu cotización",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}
