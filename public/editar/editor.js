@@ -1,4 +1,6 @@
-import {REPO,BRANCH,names,clone,changedFiles,validate,encodeText,decodeText} from './core.js';
+import {defaults,applyVisual,visualAssets,youtubeURL} from '../visual.js?v=3';
+import {mountAdvanced} from './advanced.js?v=3';
+import {REPO,BRANCH,names,clone,changedFiles,validate,encodeText,decodeText} from './core.js?v=3';
 const $=id=>document.getElementById(id),frame=$('preview');
 let token='',base={},data={},templates={},styles='',head='',treeSha='',page='index',selection=null,busy=false,history=[],uploads=new Map(),assetPaths=new Set(),renderTimer;
 const apiRoot='https://api.github.com/repos/'+REPO;
@@ -21,6 +23,7 @@ async function load(){
  await pool(files,async f=>{if(f.size>2e6)throw Error('Un archivo de contenido es demasiado grande.');const blob=await api('/git/blobs/'+f.sha);const text=decodeText(blob.content);if(f.path.startsWith('content/'))incoming[f.path.slice(8,-5)]=JSON.parse(text);else if(f.path.startsWith('templates/'))incomingTemplates[f.path.slice(10,-5)]=text;else styles=text;});
  if(!styles.includes('.hero')||!styles.includes(':root'))throw Error('No se pudo cargar el diseño. Recarga el editor; no se mostrará una página sin formato.');
  if(!incoming.media||!incoming.contacto||!incoming.index||!incomingTemplates.header||!incomingTemplates.footer)throw Error('No se encontró la estructura editable de RELIEVE.');
+ incoming.visual??=defaults();
  base=clone(incoming);data=clone(incoming);templates=incomingTemplates;history=[];selection=null;revokeUploads();
  $('page').replaceChildren();for(const [slug,label]of Object.entries(names)){if(templates[slug]){const op=document.createElement('option');op.value=slug;op.textContent=label;$('page').append(op);}}
  $('media-select').replaceChildren();for(const key of Object.keys(data.media)){const option=document.createElement('option');option.value=key;option.textContent=({volcanes:'Portada — volcanes',logo_relieve:'Logo',video_poster:'Portada del video',relieve_original:'Video',equipo:'Equipo'})[key]||names[key]||key.replaceAll('_',' ');$('media-select').append(option);}
@@ -32,6 +35,7 @@ function checkpoint(){history.push(clone(data));if(history.length>40)history.shi
 function value(group,key){return String(data[group]?.[key]??'');}
 function mediaURL(path){return uploads.get(path)?.url||path;}
 function render(keepScroll=true){
+ advanced.refresh();
  const y=keepScroll?(frame.contentWindow?.scrollY||0):0;
  const source=templates[page].replace('[[HEADER]]',templates.header).replace('[[FOOTER]]',templates.footer);
  const doc=new DOMParser().parseFromString(source,'text/html');
@@ -53,7 +57,7 @@ function render(keepScroll=true){
  const walker=doc.createTreeWalker(doc.body,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
  for(const node of nodes){const regex=/\[\[([a-z_]+)\.([a-z_0-9]+)\]\]/g;let match,last=0;const frag=doc.createDocumentFragment();let found=false;while((match=regex.exec(node.textContent))){found=true;frag.append(doc.createTextNode(node.textContent.slice(last,match.index)));const span=doc.createElement('span');span.dataset.editKey=match[1]+'.'+match[2];span.setAttribute('contenteditable','plaintext-only');span.setAttribute('spellcheck','true');span.setAttribute('aria-label','Editar texto');span.textContent=value(match[1],match[2]);frag.append(span);last=regex.lastIndex;}if(found){frag.append(doc.createTextNode(node.textContent.slice(last)));node.replaceWith(frag);}}
  // Scripts cannot execute in the sandboxed preview, and submissions are intercepted below.
- frame.onload=()=>{const d=frame.contentDocument;frame.contentWindow.scrollTo(0,y);bindInlineEditing(d);d.addEventListener('submit',e=>e.preventDefault(),true);d.addEventListener('click',e=>{e.preventDefault();const image=e.target.closest('[data-image-key]');const text=e.target.closest('[data-edit-key]');if(image)select('image',image.dataset.imageKey,image);else if(text){select('text',text.dataset.editKey,text);text.focus();}else if(e.target.closest('.menu-toggle')){const menu=d.querySelector('#menu');menu?.classList.toggle('open');}else{const a=e.target.closest('a');if(a){const dest=new URL(a.getAttribute('href'),location.origin);const slug=dest.pathname.split('/').pop().replace('.html','')||'index';if(dest.origin===location.origin&&names[slug]){page=slug;$('page').value=slug;clearSelection();render(false);}}}},true);highlight();};
+ frame.onload=()=>{const d=frame.contentDocument;applyVisual(d,{visual:data.visual,media:data.media},page,{resolve:mediaURL,editing:true});frame.contentWindow.scrollTo(0,y);bindInlineEditing(d);d.addEventListener('submit',e=>e.preventDefault(),true);d.addEventListener('click',e=>{if(e.target.closest('[data-rv-control],video'))return;const extra=e.target.closest('[data-rv-block]');if(extra){e.preventDefault();advanced.selectBlock(extra.dataset.rvBlock);return;}e.preventDefault();const image=e.target.closest('[data-image-key]');const text=e.target.closest('[data-edit-key]');if(image)select('image',image.dataset.imageKey,image);else if(text){select('text',text.dataset.editKey,text);text.focus();}else if(e.target.closest('.menu-toggle')){const menu=d.querySelector('#menu');menu?.classList.toggle('open');}else{const a=e.target.closest('a');if(a){const dest=new URL(a.getAttribute('href'),location.origin);const slug=dest.pathname.split('/').pop().replace('.html','')||'index';if(dest.origin===location.origin&&names[slug]){page=slug;$('page').value=slug;clearSelection();render(false);}}}},true);highlight();};
  frame.srcdoc='<!doctype html>'+doc.documentElement.outerHTML;
 }
 function bindInlineEditing(d){
@@ -64,7 +68,7 @@ function bindInlineEditing(d){
 }
 function highlight(){const d=frame.contentDocument;if(!d)return;d.querySelectorAll('.editing-selected').forEach(x=>x.classList.remove('editing-selected'));if(selection){for(const e of d.querySelectorAll(selection.type==='text'?'[data-edit-key]':'[data-image-key]'))if(e.dataset[selection.type==='text'?'editKey':'imageKey']===selection.key)e.classList.add('editing-selected');}}
 function clearSelection(){selection=null;$('text-panel').hidden=true;$('image-panel').hidden=true;$('selection-title').textContent='Selecciona un elemento';$('selection-help').textContent='Pulsa un texto, una foto o el logo en la vista de la derecha.';}
-function select(type,key,el){selection={type,key};$('text-panel').hidden=type!=='text';$('image-panel').hidden=type!=='image';if(type==='text'){const [g,k]=key.split('.');$('selection-title').textContent='Editar texto';$('selection-help').textContent=g==='comun'?'Este texto se comparte entre todas las páginas.':'Edita este texto y revisa el resultado a la derecha.';$('text-value').value=value(g,k);}else{$('workspace').classList.add('panel-open');$('toggle-panel').setAttribute('aria-expanded','true');const video=/\.mp4$/i.test(data.media[key]);$('selection-title').textContent=video?'Cambiar video':key==='logo_relieve'?'Cambiar logo':'Cambiar imagen';$('selection-help').textContent='Este archivo se actualizará en todos los lugares donde se utiliza.';$('image-preview').hidden=video;$('image-preview').src=video?'':mediaURL(data.media[key]);$('file').accept=video?'video/mp4':'image/png,image/jpeg,image/webp,image/gif';$('file-label').textContent=video?'Seleccionar MP4':'Seleccionar imagen';$('media-note').textContent=video?'MP4 de hasta 20 MiB. Cambia su portada en Todas las fotos, logo y video.':key==='logo_relieve'?'Usa PNG transparente. El diseño muestra el logo en blanco.':'PNG, JPG, WebP o GIF. Hasta 8 MiB.';$('file').value='';}highlight();}
+function select(type,key,el){selection={type,key};$('text-panel').hidden=type!=='text';$('image-panel').hidden=type!=='image';if(type==='text'){const [g,k]=key.split('.');$('selection-title').textContent='Editar texto';$('selection-help').textContent=g==='comun'?'Este texto se comparte entre todas las páginas.':'Edita este texto y revisa el resultado a la derecha.';$('text-value').value=value(g,k);}else{$('workspace').classList.add('panel-open');$('toggle-panel').setAttribute('aria-expanded','true');const video=/\.mp4$/i.test(data.media[key]);$('selection-title').textContent=video?'Cambiar video':key==='logo_relieve'?'Cambiar logo':'Cambiar imagen';$('selection-help').textContent='Este archivo se actualizará en todos los lugares donde se utiliza.';$('image-preview').hidden=video;$('image-preview').src=video?'':mediaURL(data.media[key]);$('file').accept=video?'video/mp4':'image/png,image/jpeg,image/webp,image/gif';$('file-label').textContent=video?'Seleccionar MP4':'Seleccionar imagen';$('media-note').textContent=video?'MP4 de hasta 20 MiB. Cambia su portada en Todas las fotos, logo y video.':key==='logo_relieve'?'Usa PNG transparente. El diseño muestra el logo en blanco.':'PNG, JPG, WebP o GIF. Hasta 8 MiB.';$('file').value='';}advanced.refresh();highlight();}
 function edit(group,key,v){if(data[group][key]===v)return;checkpoint();data[group][key]=v;update();clearTimeout(renderTimer);renderTimer=setTimeout(()=>render(),150);status('Cambio en vista previa; todavía no se ha publicado.');}
 $('text-value').addEventListener('input',()=>{if(selection?.type==='text'){const [g,k]=selection.key.split('.');edit(g,k,$('text-value').value);}});
 for(const [id,key]of [['email','email'],['phone','telefono'],['phone-label','telefono_visible']])$(id).addEventListener('input',()=>edit('contacto',key,$(id).value));
@@ -83,14 +87,14 @@ $('page').addEventListener('change',()=>{page=$('page').value;clearSelection();r
 $('mobile').onclick=()=>{$('frame-wrap').classList.add('mobile');$('mobile').classList.add('selected');$('desktop').classList.remove('selected');$('mobile').setAttribute('aria-pressed','true');$('desktop').setAttribute('aria-pressed','false');};
 $('desktop').onclick=()=>{$('frame-wrap').classList.remove('mobile');$('desktop').classList.add('selected');$('mobile').classList.remove('selected');$('desktop').setAttribute('aria-pressed','true');$('mobile').setAttribute('aria-pressed','false');};
 $('undo').onclick=()=>{if(!history.length)return;data=history.pop();fillContact();clearSelection();render();update();status('Se deshizo el último cambio.');};
-$('review').onclick=()=>{try{validate(data,base);const list=changedFiles(base,data);$('summary').textContent='Se actualizarán '+list.length+' sección(es): '+list.map(x=>names[x]||({media:'fotos y logo',comun:'menú y pie',contacto:'contacto'})[x]||x).join(', ')+'.';$('confirm').showModal();}catch(e){status(e.message);}};
+$('review').onclick=()=>{try{validate(data,base);const list=changedFiles(base,data);$('summary').textContent='Se actualizarán '+list.length+' sección(es): '+list.map(x=>names[x]||({media:'fotos y logo',comun:'menú y pie',contacto:'contacto',visual:'diseño y contenido adicional'})[x]||x).join(', ')+'.';$('confirm').showModal();}catch(e){status(e.message);}};
 $('confirm').addEventListener('close',()=>{if($('confirm').returnValue==='publish')publish();});
 function lock(on){busy=on;document.querySelectorAll('#workspace input,#workspace textarea,#workspace select,#workspace button').forEach(x=>x.disabled=on);frame.style.pointerEvents=on?'none':'';update();}
 async function publish(){
  if(busy||!dirty())return;lock(true);status('Comprobando la versión actual…');
  try{
  validate(data,base);const ref=await api('/git/ref/heads/'+BRANCH);if(ref.object.sha!==head)throw Error('Hay cambios nuevos en GitHub o Pages CMS. No se ha sobrescrito nada. Conserva tus textos y recarga el editor para trabajar sobre la última versión.');
- const entries=[];const used=new Set(Object.values(data.media));let total=0;
+ const entries=[];const used=new Set([...Object.values(data.media),...visualAssets(data.visual)]);let total=0;
  for(const path of used){if(!uploads.has(path)&&!assetPaths.has(path))throw Error('Falta un archivo de imagen. Vuelve a seleccionarlo.');const f=uploads.get(path);if(!f||assetPaths.has(path))continue;total+=f.size;if(total>24*1024*1024)throw Error('Publica menos archivos a la vez: el máximo por operación es 24 MiB.');}
  status('Guardando los archivos en GitHub…');
  for(const [path,file]of uploads){if(!used.has(path)||assetPaths.has(path))continue;const blob=await api('/git/blobs','POST',{content:file.base64,encoding:'base64'});entries.push({path:'public'+path,mode:'100644',type:'blob',sha:blob.sha});}
@@ -104,3 +108,12 @@ async function publish(){
 $('login-form').addEventListener('submit',async e=>{e.preventDefault();token=$('token').value.trim();$('token').value='';$('connect').disabled=true;$('login-status').textContent='Abriendo la versión más reciente de tu página…';try{await load();$('login').hidden=true;$('workspace').hidden=false;status('Pulsa un texto y escribe directamente sobre la página.');}catch(e){token='';$('login-status').textContent=e.message;}finally{$('connect').disabled=false;}});
 $('logout').onclick=()=>{if(dirty()&&!window.confirm('Hay cambios sin publicar. ¿Quieres descartarlos y salir?'))return;clearTimeout(renderTimer);token='';base={};data={};templates={};history=[];revokeUploads();frame.srcdoc='';$('workspace').hidden=true;$('login').hidden=false;$('login-status').textContent='Sesión cerrada.';};
 window.addEventListener('beforeunload',e=>{if(dirty()){e.preventDefault();e.returnValue='';}});
+
+async function uploadAsset(f,kind){
+ const types={image:{'image/png':'png','image/jpeg':'jpg','image/webp':'webp','image/gif':'gif'},video:{'video/mp4':'mp4'},audio:{'audio/mpeg':'mp3'}};
+ const ext=types[kind]?.[f.type];if(!ext)throw Error('Formato no admitido. Usa PNG/JPG/WebP/GIF, MP4 o MP3 según el campo.');
+ const limit={image:8,video:20,audio:15}[kind]*1024*1024;if(f.size>limit)throw Error('El archivo supera el límite de '+limit/1024/1024+' MiB.');
+ if(kind==='image'){const bitmap=await createImageBitmap(f);bitmap.close();}
+ const path='/assets/extra-'+crypto.randomUUID()+'.'+ext;const bytes=new Uint8Array(await f.arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));uploads.set(path,{base64:btoa(binary),url:URL.createObjectURL(f),size:f.size});return path;
+}
+const advanced=mountAdvanced({state:()=>({data,page,selection}),change:fn=>{if(!data.visual)return;checkpoint();fn(data.visual);update();render();},upload:uploadAsset,lock,status,youtube:youtubeURL});

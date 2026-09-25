@@ -1,12 +1,15 @@
+import {validateVisual} from '../visual.js';
 export const REPO='relieveguate-star/relieve-web';
 export const BRANCH='main';
 export const names={index:'Inicio',servicios:'Servicios',experiencia:'Nuestra experiencia',cotizacion:'Cotización',geofisica:'Geofísica',topografia:'Topografía',geotecnia:'Geotecnia',geologia:'Geología',mineria:'Minería',hidrogeologia:'Hidrogeología',perforacion:'Perforación',ingenieria:'Ingeniería'};
 export const clone=x=>JSON.parse(JSON.stringify(x));
 export function changedFiles(original,current){return Object.keys(original).filter(k=>JSON.stringify(original[k])!==JSON.stringify(current[k]));}
 export function validate(data,original){
+ validateVisual(data.visual);
  if(!/^\d{8,15}$/.test(data.contacto.telefono))throw Error('El número de WhatsApp debe contener de 8 a 15 dígitos, con código de país.');
  if(!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(data.contacto.email))throw Error('Revisa el correo electrónico.');
  for(const [group,values] of Object.entries(original)){
+  if(group==='visual')continue;
   if(!data[group]||Object.keys(values).length!==Object.keys(data[group]).length)throw Error('La estructura del contenido cambió. Recarga el editor.');
   for(const key of Object.keys(values)){
    const value=data[group][key];

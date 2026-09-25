@@ -9,3 +9,5 @@
 .toolbar{gap:10px}.toolbar button{white-space:nowrap;padding:9px 10px}.wordmark{margin-right:0}.page-label{min-width:150px}
 @media(max-width:1200px){.toolbar{height:112px;flex-wrap:wrap;padding:10px 15px}.editor-layout{height:calc(100dvh - 112px)}}
 @media(max-width:650px){.toolbar{height:150px;align-content:center}.editor-layout{height:calc(100dvh - 150px)}.panel{width:min(320px,95%);max-height:none;right:6px}.canvas{min-height:0}#changes{font-size:11px}}
+
+.panel{width:360px}.panel input[type="color"]{height:40px;padding:4px;cursor:pointer}.panel input[type="checkbox"]{width:auto;margin-right:8px}.advanced-actions{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.advanced-actions button{font-size:12px;padding:7px 10px}.panel details{padding-bottom:12px}.panel input[type="range"]{padding:0;width:100%;accent-color:#12633d}.panel input[type="file"]{font-size:12px}.panel select{font-size:13px}#block-fields{border-left:2px solid #dce5de;padding-left:12px}#size-panel summary{line-height:1.4}@media(max-width:650px){.panel{width:min(360px,95%)}}
